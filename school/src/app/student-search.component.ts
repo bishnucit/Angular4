@@ -8,9 +8,9 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import { Subject }           from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
-import { Student } from '../student';
+import { Student } from './student';
 import { Router } from '@angular/router';
-import { StudentSearchService } from '../student-search.service';
+import { StudentSearchService } from './student-search.service';
 import 'rxjs/add/operator/switchMap';
 
 

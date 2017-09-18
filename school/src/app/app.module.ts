@@ -10,11 +10,12 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { StudentDetailComponent } from './student-detail/student-detail.component';
-import { StudentSearchComponent } from './student-search/student-search.component';
-import { StudentsComponent } from './students/students.component';
+import { DashboardComponent } from './dashboard.component';
+import { StudentDetailComponent } from './student-detail.component';
+import { StudentSearchComponent } from './student-search.component';
+import { StudentsComponent } from './students.component';
 import { StudentService } from './student.service';
+import { StudentSearchService } from './student-search.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { StudentService } from './student.service';
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule
   ],
-  providers: [StudentService],
+  providers: [StudentService, StudentSearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
