@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'
 import { HttpModule } from '@angular/http'
-
+import { provideRoutes} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 
 // Imports for loading & configuring the in-memory web api
@@ -16,6 +16,7 @@ import { StudentSearchComponent } from './student-search.component';
 import { StudentsComponent } from './students.component';
 import { StudentService } from './student.service';
 import { StudentSearchService } from './student-search.service';
+import { Routes,RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -26,12 +27,15 @@ import { StudentSearchService } from './student-search.service';
     StudentsComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     FormsModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService),
-    AppRoutingModule
+    RouterModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService)
+    
   ],
+
   providers: [StudentService, StudentSearchService],
   bootstrap: [AppComponent]
 })
