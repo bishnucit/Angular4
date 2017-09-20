@@ -17,6 +17,7 @@ import { StudentsComponent } from './students.component';
 import { StudentService } from './student.service';
 import { StudentSearchService } from './student-search.service';
 import { Routes,RouterModule } from '@angular/router';
+import { AboutComponent } from './about.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { Routes,RouterModule } from '@angular/router';
     DashboardComponent,
     StudentDetailComponent,
     StudentSearchComponent,
-    StudentsComponent
+    StudentsComponent,
+    AboutComponent
   ],
   imports: [
     AppRoutingModule,

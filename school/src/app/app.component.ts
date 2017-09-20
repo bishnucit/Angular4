@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
     <nav>
       <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
       <a routerLink="/students" routerLinkActive="active">Students</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
     </nav>
     <router-outlet></router-outlet>
   `,
